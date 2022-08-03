@@ -1,0 +1,18 @@
+@import url(css-comuns/cabecalho.css);
+@import url(css-comuns/banner.css);
+
+:root {
+    --cinzaEscuro: #545871;
+    --cinzaMedio: #9497a7;
+    --cinzaClaro: #DADBE7;
+    --cinzaClarissimo: #F0F1F8;
+    --rosaEscuro: #C37E7B;
+    --rosaMedio: #F1CFCD;
+    --rosaCinza: #E9DBDA;
+    --rosaClaro: #FAECEB;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--cinzaClarissimo);
+}

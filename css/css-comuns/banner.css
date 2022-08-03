@@ -1,0 +1,14 @@
+.banner {
+    text-align: center;
+    padding: 1em;
+}
+.banner__titulo {
+    color: var(--cinzaEscuro);
+    font-size: 1.5em;
+    font-family: 'Noto Serif', serif;
+    font-weight: 700;
+}
+.banner__texto {
+    color: var(--cinzaEscuro);
+    margin: 0.5em 0;
+}
