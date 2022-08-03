@@ -1,0 +1,106 @@
+.card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+.card__etapas {
+    background-color: var(--cinzaEscuro);
+    padding: 2em 6em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.etapas__img {
+    width: 20%;
+    margin-bottom: 3em;
+}
+.card__etapas-barra {
+    width: max-content;
+    text-align: left;
+    /*margin: auto 0;*/
+}
+.fa-regular.fa-user, .fa-solid.fa-paw {
+    color: var(--cinzaEscuro);
+    background-color: var(--rosaCinza);
+    border-radius: 1em;
+    padding: 0.5em;
+    margin-right: 0.5em;
+}
+#ativo {
+    background-color: var(--rosaEscuro);
+}
+.etapas-barra__texto {
+    color: var(--rosaCinza);
+}
+.etapas-barra__texto-ativo {
+    color: var(--rosaEscuro);
+    font-weight: 700;
+}
+.etapas-barra__barra {
+    font-size: 3.5em;
+    margin-top: -0.15em;
+    color: var(--rosaCinza);
+}
+.card__formulário {
+    background-color: var(--rosaClaro);
+    padding: 2em 4em 1em 4em;
+}
+.card__formulário-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1em;
+    column-gap: 2em;
+}
+.card__formulário-titulo {
+    grid-column: span 2;
+    margin-bottom: 2em;
+    color: var(--cinzaEscuro);
+    font-size: 1.3em;
+    font-family: 'Noto Serif', serif;
+    font-weight: 700;
+    text-align: center;
+}
+.formulário__campo {
+    display: flex;
+    flex-direction: column;
+}
+.formulário__label {
+    color: var(--cinzaMedio);
+    margin-bottom: 0.5em;
+    font-size: 0.9em;
+}
+.formulário__input {
+    height: 2em;
+    padding-left: 0.5em;
+    border-radius: 0.5em;
+    outline: none;
+    border: 1px solid transparent;
+    color: var(--cinzaEscuro);
+}
+.formulário__input:focus {
+    border: 1px solid var(--rosaEscuro);
+}
+.formulário__input::placeholder {
+    color: var(--rosaEscuro);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+.formulário__input:disabled {
+    background-color: var(--rosaCinza);
+    color: var(--cinzaEscuro);
+}
+.card__formulário-botao {
+    grid-column: span 2;
+    width: 20%;
+    margin-top: 1em;
+    padding: 0.5em;
+    justify-self: center;
+    background-color: var(--cinzaEscuro);
+    border: none;
+    border-radius: 1em;
+    color: var(--cinzaClarissimo);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+}
+

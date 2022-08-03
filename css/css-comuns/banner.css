@@ -1,6 +1,6 @@
 .banner {
     text-align: center;
-    padding: 1em;
+    padding: 2em 1em;
 }
 .banner__titulo {
     color: var(--cinzaEscuro);

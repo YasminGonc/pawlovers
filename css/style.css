@@ -1,5 +1,6 @@
 @import url(css-comuns/cabecalho.css);
 @import url(css-comuns/banner.css);
+@import url(css-comuns/card.css);
 
 :root {
     --cinzaEscuro: #545871;

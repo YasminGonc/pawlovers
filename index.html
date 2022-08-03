@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://kit.fontawesome.com/459768b8b6.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -35,14 +35,84 @@
             <h2 class="banner__titulo">Bem-vindo ao Pawlovers</h2>
             <p class="banner__texto">Complete o cadastro para começar</p>
         </section>
+
         <section class="card">
             <div class="card__etapas">
-                <img src="images/Pawlovers-logo.png" alt="Logo pawlovers">
-                <p><img src="images/user.svg" alt=""></p>
+                <img src="images/Pawlovers-logo-azul.png" alt="Logo pawlovers" class="etapas__img">
+                <div class="card__etapas-barra">
+                    <p class="etapas-barra__texto etapas-barra__texto-ativo"><i class="fa-regular fa-user" id="ativo"></i>Dados do tutor</p>
+                    <p class="etapas-barra__barra">|</p>
+                    <p class="etapas-barra__texto"><i class="fa-solid fa-paw"></i>Dados do pet</p>
+                </div>
             </div>
-            <div class="card__formulário"></div>
+            <div class="card__formulário">
+                <h2 class="card__formulário-titulo">Olá! Nos conte um pouco sobre você.</h2>
+                <form class="card__formulário-form">
+                    <fieldset class="formulário__campo">
+                        <label for="nome" class="formulário__label">Nome</label>
+                        <input type="text" name="nome" placeholder="Nome" class="formulário__input">
+                    </fieldset>
+
+                    <fieldset class="formulário__campo">
+                        <label for="sobrenome" class="formulário__label">Sobrenome</label>
+                        <input type="text" name="Sobrenome" placeholder="Sobrenome" class="formulário__input">
+                    </fieldset>
+
+                    <fieldset class="formulário__campo">
+                        <label for="telefone" class="formulário__label">Telefone</label>
+                        <input type="number" name="telefone" placeholder="(62) 11111-1111" class="formulário__input">
+                    </fieldset>
+
+                    <fieldset class="formulário__campo">
+                        <label for="cep" class="formulário__label">CEP</label>
+                        <input type="number" name="cep" id="cep" placeholder="010001000" class="formulário__input">
+                    </fieldset>
+
+                    <fieldset class="formulário__campo">
+                        <label for="rua" class="formulário__label">Rua</label>
+                        <input type="text" name="rua" id="rua" placeholder="Rua" class="formulário__input">
+                    </fieldset>
+
+                    <fieldset class="formulário__campo">
+                        <label for="complemento" class="formulário__label">Complemento</label>
+                        <input type="text" name="complemento" placeholder="Qd.01, lt.02" class="formulário__input">
+                    </fieldset>
+
+                    <fieldset class="formulário__campo">
+                        <label for="numero" class="formulário__label">Número</label>
+                        <input type="number" name="complemento" placeholder="120" class="formulário__input">
+                    </fieldset>
+
+                    <fieldset class="formulário__campo">
+                        <label for="bairro" class="formulário__label">Bairro</label>
+                        <input type="text" name="bairro" id="bairro" placeholder="Bairro" class="formulário__input">
+                    </fieldset>
+
+                    <fieldset class="formulário__campo">
+                        <label for="cidade" class="formulário__label">Cidade</label>
+                        <input type="text" name="cidade" id="cidade" placeholder="Cidade" class="formulário__input">
+                    </fieldset>
+
+                    <fieldset class="formulário__campo">
+                        <label for="estado" class="formulário__label">Estado</label>
+                        <input type="text" name="estado" id="" placeholder="Estado" class="formulário__input">
+                    </fieldset>
+
+                    <fieldset class="formulário__campo">
+                        <label for="email" class="formulário__label">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Email" class="formulário__input">
+                    </fieldset>
+
+                    <fieldset class="formulário__campo">
+                        <label for="senha" class="formulário__label">Senha</label>
+                        <input type="password" name="senha" id="senha" placeholder="Senha" class="formulário__input">
+                    </fieldset>
+
+                    <input type="submit" value="Cadastrar" class="card__formulário-botao">
+                </form>
+            </div>
         </section>
     </main>
-    
+    <script src="main.js"></script>
 </body>
 </html>
