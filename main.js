@@ -61,7 +61,7 @@ btnFormulario.addEventListener('click', (evento) => {
                 inputs[i].style.border = '1px solid red';
             }
         }
-        
+       //validar email e senha, fazer as coisas receberem parâmetros de novo
 
         form.setAttribute('action', 'cadastropet/cadastropet.html'); //para ir para a próxima página, mas isso só vai acontecer se todos os inputs estiverem válidos 
     }
