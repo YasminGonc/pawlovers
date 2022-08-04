@@ -51,61 +51,102 @@
                     <fieldset class="formulário__campo">
                         <label for="nome" class="formulário__label">Nome</label>
                         <input type="text" name="nome" placeholder="Nome" class="formulário__input">
+                        <p class="formulario__textoerro">Nome não pode estar vazio</p>
                     </fieldset>
 
                     <fieldset class="formulário__campo">
                         <label for="sobrenome" class="formulário__label">Sobrenome</label>
                         <input type="text" name="Sobrenome" placeholder="Sobrenome" class="formulário__input">
+                        <p class="formulario__textoerro">Sobrenome não pode estar vazio</p>
                     </fieldset>
 
                     <fieldset class="formulário__campo">
                         <label for="telefone" class="formulário__label">Telefone</label>
                         <input type="number" name="telefone" placeholder="(62) 11111-1111" class="formulário__input">
+                        <p class="formulario__textoerro">Telefone não pode estar vazio</p>
                     </fieldset>
 
                     <fieldset class="formulário__campo">
                         <label for="cep" class="formulário__label">CEP</label>
-                        <input type="number" name="cep" id="cep" placeholder="010001000" class="formulário__input">
+                        <input type="number" name="cep" id="cep" placeholder="01.000.100" class="formulário__input">
+                        <p class="formulario__textoerro">CEP não pode estar vazio</p>
                     </fieldset>
 
                     <fieldset class="formulário__campo">
                         <label for="rua" class="formulário__label">Rua</label>
                         <input type="text" name="rua" id="rua" placeholder="Rua" class="formulário__input">
+                        <p class="formulario__textoerro">Rua não pode estar vazia</p>
                     </fieldset>
 
                     <fieldset class="formulário__campo">
                         <label for="complemento" class="formulário__label">Complemento</label>
                         <input type="text" name="complemento" placeholder="Qd.01, lt.02" class="formulário__input">
+                        <p class="formulario__textoerro">Complemento não pode estar vazio</p>
                     </fieldset>
 
                     <fieldset class="formulário__campo">
                         <label for="numero" class="formulário__label">Número</label>
                         <input type="number" name="complemento" placeholder="120" class="formulário__input">
+                        <p class="formulario__textoerro">Número não pode estar vazio</p>
                     </fieldset>
 
                     <fieldset class="formulário__campo">
                         <label for="bairro" class="formulário__label">Bairro</label>
                         <input type="text" name="bairro" id="bairro" placeholder="Bairro" class="formulário__input">
+                        <p class="formulario__textoerro">Bairro não pode estar vazio</p>
                     </fieldset>
 
                     <fieldset class="formulário__campo">
                         <label for="cidade" class="formulário__label">Cidade</label>
                         <input type="text" name="cidade" id="cidade" placeholder="Cidade" class="formulário__input">
+                        <p class="formulario__textoerro">Cidade não pode estar vazia</p>
                     </fieldset>
 
-                    <fieldset class="formulário__campo">
+                    <div class="formulário__campo">
                         <label for="estado" class="formulário__label">Estado</label>
-                        <input type="text" name="estado" id="" placeholder="Estado" class="formulário__input">
-                    </fieldset>
+                        <select name="estado" id="estado" class="select__input">
+                            <option value="null">-</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                        <p class="formulario__textoerro-select">Estado não pode estar vazio</p>
+                    </div>
 
                     <fieldset class="formulário__campo">
                         <label for="email" class="formulário__label">Email</label>
                         <input type="email" name="email" id="email" placeholder="Email" class="formulário__input">
+                        <p class="formulario__textoerro">Email não pode estar vazio</p>
                     </fieldset>
 
                     <fieldset class="formulário__campo">
                         <label for="senha" class="formulário__label">Senha</label>
                         <input type="password" name="senha" id="senha" placeholder="Senha" class="formulário__input">
+                        <p class="formulario__textoerro">Senha não pode estar vazio</p>
                     </fieldset>
 
                     <input type="submit" value="Cadastrar" class="card__formulário-botao">

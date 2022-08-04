@@ -69,7 +69,7 @@
     margin-bottom: 0.5em;
     font-size: 0.9em;
 }
-.formulário__input {
+.formulário__input, .select__input {
     height: 2em;
     padding-left: 0.5em;
     border-radius: 0.5em;
@@ -88,6 +88,12 @@
 .formulário__input:disabled {
     background-color: var(--rosaCinza);
     color: var(--cinzaEscuro);
+}
+.formulario__textoerro, .formulario__textoerro-select {
+    color: red;
+    font-size: 0.8em;
+    margin: 0.2em 0 0 0.5em;
+    visibility: hidden;
 }
 .card__formulário-botao {
     grid-column: span 2;
