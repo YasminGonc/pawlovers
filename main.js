@@ -7,7 +7,10 @@ const estado = document.querySelector('#estado');
 const btnFormulario = document.querySelector('.card__formulário-botao');
 const form = document.querySelector('.card__formulário-form');
 const inputs = document.querySelectorAll('.formulário__input');
-const textoErro = document.querySelectorAll('.formulario__textoerro');
+
+function bloquearInput(parametro) {
+    parametro.setAttribute('disabled', 'disabled');
+}
 
 async function buscaEndereco() {
     try {
@@ -20,60 +23,106 @@ async function buscaEndereco() {
         } 
         else {
             rua.value = consultaCepConvertida.logradouro;
-            rua.setAttribute('disabled', 'disabled');
+            bloquearInput(rua);
 
             bairro.value = consultaCepConvertida.bairro;
-            bairro.setAttribute('disabled', 'disabled');
+            bloquearInput(bairro);
 
             cidade.value = consultaCepConvertida.localidade;
-            cidade.setAttribute('disabled', 'disabled');
+            bloquearInput(cidade);
 
             estado.value = consultaCepConvertida.uf;
-            estado.setAttribute('disabled', 'disabled');
-
-            console.log(consultaCepConvertida);
+            bloquearInput(estado);
         }
 
     } catch (erro) {}
 }
 
+function validaCep(cep) {
+    if(cep.value.length < 8) {
+        return true;
+    }
+}
+
+function mostrarTextoErroEMudarBorda(input) {
+    input.nextElementSibling.style.visibility = 'visible';
+    input.style.border = '1px solid red';
+}
+
+function resetInputs(input) {
+    input.nextElementSibling.style.visibility = 'hidden';
+    input.style.border = '1px solid transparent';
+}
+
 cep.addEventListener('focusout', () => {
-    buscaEndereco();
+    resetInputs(cep);
+
+    if(validaCep(cep) == true) {
+        cep.nextElementSibling.innerText = 'Quantidade de dígitos do CEP insuficiente. Digite um CEP válido';
+        mostrarTextoErroEMudarBorda(cep);
+    }
+    else {
+       buscaEndereco(); 
+    }
 });
 
+function validarTelefone(telefone) {
+    if(telefone.value.length < 10) {
+        return true;
+    }
+}
+
+function validarSenha(senha) {
+    const regexSenha = /^(?=.*\d).{4,8}$/;
+    return (regexSenha.test(senha.value));
+}
+
+function validarEmail(email) {
+    const regexEmail = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+    return (regexEmail.test(email.value));
+}
 
 btnFormulario.addEventListener('click', (evento) => {
-    evento.preventDefault();
     for (let i = 0; i < inputs.length; i++) {
+        resetInputs(inputs[i]);
+
         if (inputs[i].value.length < 1) {
-            textoErro[i].style.visibility = 'visible';
-            inputs[i].style.border = '1px solid red';
+            evento.preventDefault();
+            mostrarTextoErroEMudarBorda(inputs[i]);
 
             if (estado.value == 'null') {
-                estado.nextElementSibling.style.visibility = 'visible';
-                estado.style.border = '1px solid red';
+                evento.preventDefault();
+                mostrarTextoErroEMudarBorda(estado);
             }
         }
-        else if(inputs[i].name == 'telefone') { //validar telefone, montei a função mas a função não está fazendo o que eu quero. Assim dá certo
-            if(inputs[i].value.length < 10) {
+        else if(inputs[i].name == 'telefone') { 
+            if(validarTelefone(inputs[i]) == true) {
+                evento.preventDefault();
                 inputs[i].nextElementSibling.innerText = 'Digite um número de celular válido';
-                inputs[i].nextElementSibling.style.visibility = 'visible';
-                inputs[i].style.border = '1px solid red';
+                mostrarTextoErroEMudarBorda(inputs[i]);
             }
         }
-       //validar email e senha, fazer as coisas receberem parâmetros de novo
-
-        form.setAttribute('action', 'cadastropet/cadastropet.html'); //para ir para a próxima página, mas isso só vai acontecer se todos os inputs estiverem válidos 
+        else if(inputs[i].name == 'email') {
+            if(validarEmail(inputs[i]) == false) {
+                evento.preventDefault();
+                inputs[i].nextElementSibling.innerText = 'Digite um email válido';
+                mostrarTextoErroEMudarBorda(inputs[i]);
+            }
+        }
+        else if(inputs[i].name == 'senha') {
+            if(validarSenha(inputs[i]) == false) {
+                evento.preventDefault();
+                inputs[i].nextElementSibling.innerText = 'Digite uma senha com letras e números, de 4 a 8 dígitos';
+                mostrarTextoErroEMudarBorda(inputs[i]);
+            }
+        }
+  
     }
-
 });
 
-/*function validarTelefone(telefone) {
-    if(telefone.value.length < 10) {
-        telefone.nextElementSibling.innerText = 'Digite um número de celular válido';
-        telefone.extElementSibling.style.visibility = 'visible';
-        telefone.style.border = '1px solid red';
-    }
-}*/
+//fazer o formulário receber outras respostas depois do erro. FEITO -> ver se ficou bom
+//colocar máscara no telefone
+
+
 
 

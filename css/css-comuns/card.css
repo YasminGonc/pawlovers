@@ -85,7 +85,7 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
 }
-.formulário__input:disabled {
+.formulário__input:disabled, .select__input:disabled {
     background-color: var(--rosaCinza);
     color: var(--cinzaEscuro);
 }
