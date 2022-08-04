@@ -109,4 +109,7 @@
     font-size: 1em;
     cursor: pointer;
 }
+.card__formulário-botao:hover {
+    background-color: var(--cinzaMedio);
+}
 

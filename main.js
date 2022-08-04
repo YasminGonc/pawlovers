@@ -7,6 +7,11 @@ const estado = document.querySelector('#estado');
 const btnFormulario = document.querySelector('.card__formulário-botao');
 const form = document.querySelector('.card__formulário-form');
 const inputs = document.querySelectorAll('.formulário__input');
+const nome = document.querySelector('#nome');
+const email = document.querySelector('#email');
+const senha = document.querySelector('#senha');
+
+const dados = JSON.parse(localStorage.getItem('dados')) || [];//acessar o local storage, caso esteja vazio criar um array vazio;
 
 function bloquearInput(parametro) {
     parametro.setAttribute('disabled', 'disabled');
@@ -49,7 +54,7 @@ function mostrarTextoErroEMudarBorda(input) {
     input.style.border = '1px solid red';
 }
 
-function resetInputs(input) {
+function resetInputs(input) { 
     input.nextElementSibling.style.visibility = 'hidden';
     input.style.border = '1px solid transparent';
 }
@@ -83,6 +88,7 @@ function validarEmail(email) {
 }
 
 btnFormulario.addEventListener('click', (evento) => {
+    evento.preventDefault();
     for (let i = 0; i < inputs.length; i++) {
         resetInputs(inputs[i]);
 
@@ -118,8 +124,24 @@ btnFormulario.addEventListener('click', (evento) => {
         }
   
     }
+    evento.preventDefault();
+    adicionarDados(nome.value, email.value, senha.value);
+    localStorage.setItem('dados', JSON.stringify(dados));
 });
 
+console.log(dados);
+
+function adicionarDados(nome, email, senha) {
+    const novoDado = {
+        'nome': nome,
+        'email': email,
+        'senha': senha
+    }
+
+    dados.push(novoDado);
+
+    console.log(dados);
+}
 //fazer o formulário receber outras respostas depois do erro. FEITO -> ver se ficou bom
 //colocar máscara no telefone
 
