@@ -6,3 +6,74 @@
     font-weight: 700;
     text-align: center;
 }
+.card__formulario-texto {
+    color: var(--cinzaEscuro);
+    width: 70%;
+    line-height: 1.2em;
+}
+.formulario__opcoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--branco);
+    padding: 0.5em;
+    margin: 1.5em 0;
+}
+
+.formulario__opcoes-card {
+    text-align: center;
+    cursor: pointer;
+}
+.formulario__opcoes-card:hover {
+    background-color: var(--rosaClaro);
+}
+.opcoes__img {
+    width: 40%;
+}
+.opcoes__texto {
+    font-family: 'Noto Serif', serif;
+    font-weight: 700;
+    color: var(--cinzaEscuro);
+    margin-top: 0.5em;
+}
+.formulario__radios {
+    display: none;
+}
+.formulario__botoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 1em;
+    margin-top: 2.1em;
+}
+.formulario__botoes-botao {
+    background-color: var(--cinzaEscuro);
+    color: var(--cinzaClarissimo);
+    text-align: center;
+    width: 20%;
+    padding: 0.5em;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    border-radius: 1em;
+    cursor: pointer;
+}
+.formulario__botoes-voltar {
+    text-decoration: none;
+    width: 18%;
+    height: 1.2em;
+    border-radius: 0.9em;
+    background-color: transparent;
+    color: var(--cinzaEscuro);
+    border: 1px solid var(--cinzaEscuro);
+}
+.formulario__botoes-voltar:hover {
+    background-color: var(--rosaCinza);
+    border: 1px solid var(--rosaEscuro);
+    color: var(--rosaEscuro);
+}
+.formulario__botoes-botao.formulario__botoes-next:hover {
+    background-color: var(--cinzaMedio);
+    color: var(--rosaClaro);
+}
+
