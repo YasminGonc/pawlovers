@@ -36,9 +36,6 @@
     color: var(--cinzaEscuro);
     margin-top: 0.5em;
 }
-.formulario__radios {
-    display: none;
-}
 .formulario__botoes {
     display: flex;
     justify-content: space-between;

@@ -9,3 +9,23 @@ function mostrarNome() {
 mostrarNome();
 
 const radios = document.querySelectorAll('.radios');
+const div = document.querySelectorAll('.formulario__opcoes-card');
+const btnNext = document.querySelector('#next');
+const form = document.querySelector('.formulario__opcoes');
+
+btnNext.addEventListener('click', (evento) => {
+    
+    for(let i = 0; i < radios.length; i++) {
+        if(radios[i].checked != true) {
+            console.log('false');
+            evento.preventDefault();
+        }
+        else {
+            console.log('true');
+        }
+
+    }
+    
+})
+
+

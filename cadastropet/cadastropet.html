@@ -49,36 +49,35 @@
                 <p class="card__formulario-texto">Qual o seu pet?</p>
                 <form action="../cadastropet-parte2/parte2cadastropet.html">
                     <div class="formulario__opcoes">
-                        <label for="cao" class="formulario__opcoes-card" id="c">
+                        <label for="dog" class="formulario__opcoes-card">
                             <img src="../images/3.png" alt="" class="opcoes__img">
                             <p class="opcoes__texto">Cachorro</p>
                         </label>
-                        
                         <label for="gato" class="formulario__opcoes-card">
-                            <img src="../images/6.png" alt="" class="opcoes__img">
+                            <img src="../images/6.png" class="opcoes__img">
                             <p class="opcoes__texto">Gato</p>
                         </label>
                         <label for="passaro" class="formulario__opcoes-card">
-                            <img src="../images/passaro.png" alt="" class="opcoes__img">
+                            <img src="../images/passaro.png" class="opcoes__img">
                             <p class="opcoes__texto">Passaro</p>
                         </label>
                         <label for="outro" class="formulario__opcoes-card">
-                            <img src="../images/furao.png" alt="" class="opcoes__img">
+                            <img src="../images/furao.png" class="opcoes__img">
                             <p class="opcoes__texto">Outro</p>
                         </label>
                     </div> 
                     <div class="formulario__radios">
-                        <input type="radio" name="opcao" id="cao" class="radios">
-                        <input type="radio" name="opcao" id="gato" class="radios">
-                        <input type="radio" name="opcao" id="passaro" class="radios">
-                        <input type="radio" name="opcao" id="outro" class="radios">
+                        <input type="radio" name="opcao" id="dog" value="cão" class="radios">
+                        <input type="radio" name="opcao" id="gato" value="gato" class="radios">
+                        <input type="radio" name="opcao" id="passaro" value="pássaro" class="radios">
+                        <input type="radio" name="opcao" id="outro" value="outro" class="radios">
                     </div>
 
                     <p class="card__formulario-texto">Tem mais de um pet? Isso é fantástico! Você poderá adicionar perfis para os outros pets depois do cadastro inicial.</p>
 
                     <div class="formulario__botoes">
                         <a href="../index.html" class="formulario__botoes-botao formulario__botoes-voltar">Voltar</a>
-                        <input type="submit" value="Próximo" class="formulario__botoes-botao formulario__botoes-next">
+                        <input type="submit" value="Próximo" class="formulario__botoes-botao formulario__botoes-next" id="next">
                     </div>
                 </form>
             </div>
