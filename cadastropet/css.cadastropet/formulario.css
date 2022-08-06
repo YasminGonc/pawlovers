@@ -23,6 +23,7 @@
 .formulario__opcoes-card {
     text-align: center;
     cursor: pointer;
+    padding: 0.5em 0;
 }
 .formulario__opcoes-card:hover {
     background-color: var(--rosaClaro);
