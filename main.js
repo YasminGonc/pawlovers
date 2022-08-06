@@ -88,7 +88,6 @@ function validarEmail(email) {
 }
 
 btnFormulario.addEventListener('click', (evento) => {
-    evento.preventDefault();
     for (let i = 0; i < inputs.length; i++) {
         resetInputs(inputs[i]);
 
@@ -124,12 +123,10 @@ btnFormulario.addEventListener('click', (evento) => {
         }
   
     }
-    evento.preventDefault();
+    //evento.preventDefault();
     adicionarDados(nome.value, email.value, senha.value);
     localStorage.setItem('dados', JSON.stringify(dados));
 });
-
-console.log(dados);
 
 function adicionarDados(nome, email, senha) {
     const novoDado = {
@@ -140,7 +137,6 @@ function adicionarDados(nome, email, senha) {
 
     dados.push(novoDado);
 
-    console.log(dados);
 }
 //fazer o formulário receber outras respostas depois do erro. FEITO -> ver se ficou bom
 //colocar máscara no telefone

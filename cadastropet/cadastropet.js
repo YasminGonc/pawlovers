@@ -23,8 +23,7 @@ form.addEventListener('click', () => {
     }
 });
 
-btnNext.addEventListener('click', (evento) => {
-    
+btnNext.addEventListener('click', (evento) => {  
     for (let j = 0; j < radios.length; j++) {
         if (radios[j].checked == true){
             break;
