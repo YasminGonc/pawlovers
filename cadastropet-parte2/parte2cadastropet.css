@@ -1,6 +1,7 @@
 @import url(../css/css-comuns/cabecalho.css);
 @import url(../css/css-comuns/banner.css);
 @import url(../css/css-comuns/card.css);
+@import url(css.cadastropet-parte2/formulario-cadastropet2.css);
 
 :root {
     --cinzaEscuro: #545871;
